@@ -5,8 +5,8 @@ import re
 import time
 import sqlite3
 
-#url = 'http://www.xicidaili.com/wt/'
-url = 'file:///D:/Share/test.html'
+#url = 'http://www.xicidaili.com/wt/2'
+url = 'file:///D:/exchange/test.html'
 
 headers = {"Accept":"*/*",
            "Accept-Language":"zh-CN",
@@ -15,7 +15,7 @@ headers = {"Accept":"*/*",
     }
 
 cjar = http.cookiejar.CookieJar()
-proxy = urllib.request.ProxyHandler({'http':'1.63.107.198:80'})
+proxy = urllib.request.ProxyHandler({'http': '118.178.124.33:3128'})
 opener = urllib.request.build_opener(proxy, urllib.request.HTTPHandler, urllib.request.HTTPCookieProcessor(cjar))
 
 headall = []
@@ -26,20 +26,24 @@ for key,value in headers.items():
     
 opener.addheaders = headall
 
+dataString = ''
 try:
-    file = opener.open(url)
+    file = opener.open(url, timeout = 5)
+    data = file.read()
+    #print(data)
+    dataString = data.decode('utf-8')
+
+    #fhandle = open('D:\\exchange\\2.html',"wb")
+    #fhandle.write(data)
+    #fhandle.close()
+    
 except urllib.error.HTTPError as e:
     print(e.code)
     print(e.reason)
 except urllib.error.URLError as e:
     print(e.reason)
-
-data = file.read()#.decode('utf-8')
-dataString = data.decode('utf-8')
-
-#fhandle = open('D:\\Share\\1.html',"wb")
-#fhandle.write(data)
-#fhandle.close()
+except Exception as e:
+    print(str(e))
 
 pat_tr = '''<tr class=".*?">[\s\S]*?</tr>'''
 pattern_tr = re.compile(pat_tr)
@@ -134,7 +138,10 @@ for i in range(len(result_tr)):
     conn = sqlite3.connect('SpiderDB.db')
     c = conn.cursor()
     rl = c.execute("select IPaddress, port, proofTime from proxyServer where IPaddress = '%s' and port = '%s'" % (IPaddress, port)).fetchall()
-    if len(rl)>0 and rl[0][2]>proofTime_float:
+
+
+    if len(rl)==0 or (len(rl)>0 and rl[0][2]>proofTime_float):
+        #print('insert--------')
         c.execute("INSERT OR replace INTO proxyServer (country, IPaddress, port, location, anonymous, proxyType, speed, connectTime, survivalTime, proofTime, writeTime) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', %f, %f)" % (country, IPaddress, port, location, anonymous, proxyType, speed, connectTime, survivalTime, proofTime_float, writeTime_float))
         conn.commit()
         count += 1
