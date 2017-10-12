@@ -14,11 +14,10 @@ class GetProxy:
         print('GetProxy::getMoreServer()')
         conn = sqlite3.connect('SpiderDB.db')
         c = conn.cursor()
-        cursor = c.execute("select IPaddress, port, writeTime from proxyServer order by writeTime ASC")
+        cursor = c.execute("SELECT IPaddress, port, writeTime FROM proxyServer ORDER BY writeTime ASC")
         rl = cursor.fetchall()
         for row in rl:
             self.proxyList.append("%s:%s" % (row[0], row[1]))
-
 
     @property
     def proxyServer(self):
@@ -36,7 +35,6 @@ class GetHtml:
         self.url = url
 
         print(self.url)
-        
 
     def getHtml(self, proxy):
         print('GetHtml::getHtml()')
@@ -62,8 +60,8 @@ class GetHtml:
         opener.addheaders = headall
 
         try:
-            file = opener.open(self.url, timeout = 5)
-            
+            file = opener.open(self.url, timeout=5)
+
             data = file.read()
             print(type(data))
             dataString = data.decode('utf-8')
@@ -80,15 +78,13 @@ class GetHtml:
             print('Exception', type(e))
 
 
-
-
 if __name__ == '__main__':
     gp = GetProxy()
 
     url = "http://www.xicidaili.com/wt/"
     gh = GetHtml(url)
-    
+
     for i in range(20):
-        print('----- try',i,'-----')
+        print('----- try', i, '-----')
         html = gh.getHtml(gp.proxyServer)
         print(html)
