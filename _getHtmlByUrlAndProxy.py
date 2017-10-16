@@ -2,10 +2,12 @@ import sqlite3
 import urllib.request
 import http.cookiejar
 import urllib.error
+import time
 
 
 class GetProxy:
     proxyList = []
+    used_proxy = ''
 
     def __init__(self):
         print('GetProxy::__init__()')
@@ -14,16 +16,31 @@ class GetProxy:
         print('GetProxy::getMoreServer()')
         conn = sqlite3.connect('SpiderDB.db')
         c = conn.cursor()
-        cursor = c.execute("SELECT IPaddress, port, writeTime FROM proxyServer ORDER BY writeTime ASC")
+        cursor = c.execute("SELECT IPaddress, port, writeTime FROM proxyServer WHERE anonymous = \'高匿\' ORDER BY proofTime DESC")
         rl = cursor.fetchall()
         for row in rl:
             self.proxyList.append("%s:%s" % (row[0], row[1]))
+        conn.close()
+
+    def proxy_valid(self):
+        if self.used_proxy:
+            self.proxyList.insert(0, self.used_proxy)
+            
+            
+            with sqlite3.connect('SpiderDB.db') as conn:
+                t = self.used_proxy.split(':')
+                c = conn.cursor()
+                c.execute("UPDATE proxyServer SET proofTime=%f WHERE IPaddress='%s' and port='%s'" % (time.time(), t[0], t[1]))
+                c.execute("UPDATE proxyServer SET writeTime=%f WHERE IPaddress='%s' and port='%s'" % (time.time(), t[0], t[1]))
+                conn.commit()
+
 
     @property
     def proxyServer(self):
         while not self.proxyList:
             self.getMoreServer()
-        return self.proxyList.pop(0)
+        self.used_proxy = self.proxyList.pop(0)
+        return self.used_proxy
 
 
 class GetHtml:
@@ -78,13 +95,15 @@ class GetHtml:
             print('Exception', type(e))
 
 
+def test():
+
+    conn = sqlite3.connect('SpiderDB.db')
+    c = conn.cursor()
+    cursor = c.execute("SELECT IPaddress, port, writeTime FROM proxyServer WHERE anonymous = \'高匿\' ORDER BY proofTime DESC Limit 0,3")
+    rl = cursor.fetchall()
+    for row in rl:
+        print("%s:%s" % (row[0], row[1]))
+   
+
 if __name__ == '__main__':
-    gp = GetProxy()
-
-    url = "http://www.xicidaili.com/wt/"
-    gh = GetHtml(url)
-
-    for i in range(20):
-        print('----- try', i, '-----')
-        html = gh.getHtml(gp.proxyServer)
-        print(html)
+    test()

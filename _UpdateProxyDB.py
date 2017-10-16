@@ -116,8 +116,7 @@ class UpdateProxyDB:
                 # print('insert--------')
                 c.execute(
                     "INSERT OR replace INTO proxyServer (country, IPaddress, port, location, anonymous, proxyType, speed, connectTime, survivalTime, proofTime, writeTime) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', %f, %f)" % (
-                    country, IPaddress, port, location, anonymous, proxyType, speed, connectTime, survivalTime,
-                    proofTime_float, writeTime_float))
+                    country, IPaddress, port, location, anonymous, proxyType, speed, connectTime, survivalTime, proofTime_float, writeTime_float))
                 conn.commit()
                 count += 1
             conn.close()
