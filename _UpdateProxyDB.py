@@ -135,10 +135,33 @@ class UpdateProxyDB:
         if self.src == 'xicidaili.com':
             return self.updateFromXicidaili(html_str)
 
-    
+
+    def delete_old_proxy_server(self, num=100, days=7):
+        import datetime
+        t1 = datetime.datetime.now()
+        td = datetime.timedelta(days)
+        t = (t1 - td).timestamp()
+
+        conn = sqlite3.connect('SpiderDB.db')
+        #conn = sqlite3.connect('test.db')
+        c = conn.cursor()
+        rl = c.execute(r'''SELECT IPaddress, port, proofTime 
+                            FROM proxyServer
+                            ORDER BY proofTime DESC
+                            LIMIT %d-1, -1''' % num)
+        t_num = rl.fetchone()[2]
+        if t_num < t:
+            t = t_num
+
+        c.execute(r'''DELETE
+                          FROM proxyServer
+                          WHERE proofTime<%f;''' % t)
+        conn.commit()
+        conn.close()
+
 
 if __name__ ==  '__main__':
-    
-    print('hello')
+    up = UpdateProxyDB()
+    up.delete_old_proxy_server()
             
 

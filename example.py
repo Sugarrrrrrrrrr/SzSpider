@@ -26,6 +26,7 @@ def main():
                 result = up.update(html)
                 print(result)
                 if result > 0:
+                    gp.proxyList=[]
                     gp.proxy_valid()
                     break
             else:

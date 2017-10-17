@@ -4,9 +4,7 @@
     <list default="true" id="8f7d6500-a86a-4178-b318-f5c54de744b5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpiderDB.db" afterPath="$PROJECT_DIR$/SpiderDB.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UpdateProxyDB.py" afterPath="$PROJECT_DIR$/UpdateProxyDB.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.py" afterPath="$PROJECT_DIR$/example.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getHtmlByUrlAndProxy.py" afterPath="$PROJECT_DIR$/getHtmlByUrlAndProxy.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_UpdateProxyDB.py" afterPath="$PROJECT_DIR$/_UpdateProxyDB.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,72 +16,23 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/SzSpider$example.coverage" NAME="example Coverage Results" MODIFIED="1508122072640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SzSpider$getByProxy.coverage" NAME="getByProxy Coverage Results" MODIFIED="1507626105031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SzSpider$test.coverage" NAME="test Coverage Results" MODIFIED="1508223683943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SzSpider$_UpdateProxyDB.coverage" NAME="_UpdateProxyDB Coverage Results" MODIFIED="1508223884878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SzSpider$getHtmlByUrlAndProxy.coverage" NAME="getHtmlByUrlAndProxy Coverage Results" MODIFIED="1508132491867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SpiderCub.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpiderCub.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="14" />
-              <folding>
-                <marker date="1507700124959" expanded="true" signature="4352:4441" ph="select IPadd... proxyServer" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="example.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1311">
-              <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getHtmlByUrlAndProxy.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/getHtmlByUrlAndProxy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="88" column="25" lean-forward="false" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
-              <folding>
-                <marker date="1508132514694" expanded="true" signature="372:440" ph="SELECT IPadd... proxyServer" />
-                <marker date="1508132514694" expanded="true" signature="372:445" ph="SELECT IPadd... proxyServer" />
-                <marker date="1508132514694" expanded="true" signature="372:471" ph="SELECT IPadd... proxyServer" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateProxyDB.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UpdateProxyDB.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="128" column="30" lean-forward="true" selection-start-line="128" selection-start-column="30" selection-end-line="128" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <marker date="1508131692023" expanded="true" signature="4107:4196" ph="select IPadd... proxyServer" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -103,6 +52,8 @@
         <option value="$PROJECT_DIR$/example.py" />
         <option value="$PROJECT_DIR$/UpdateProxyDB.py" />
         <option value="$PROJECT_DIR$/getHtmlByUrlAndProxy.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/_UpdateProxyDB.py" />
       </list>
     </option>
   </component>
@@ -190,7 +141,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.getHtmlByUrlAndProxy">
+  <component name="RunManager" selected="Python._UpdateProxyDB">
+    <configuration name="_UpdateProxyDB" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SzSpider" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/_UpdateProxyDB.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="example" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -245,16 +214,38 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="3">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SzSpider" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.getByProxy" />
       <item index="1" class="java.lang.String" itemvalue="Python.example" />
       <item index="2" class="java.lang.String" itemvalue="Python.getHtmlByUrlAndProxy" />
+      <item index="3" class="java.lang.String" itemvalue="Python.test" />
+      <item index="4" class="java.lang.String" itemvalue="Python._UpdateProxyDB" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.getHtmlByUrlAndProxy" />
-        <item index="1" class="java.lang.String" itemvalue="Python.example" />
-        <item index="2" class="java.lang.String" itemvalue="Python.getByProxy" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python._UpdateProxyDB" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.getHtmlByUrlAndProxy" />
+        <item index="3" class="java.lang.String" itemvalue="Python.example" />
+        <item index="4" class="java.lang.String" itemvalue="Python.getByProxy" />
       </list>
     </recent_temporary>
   </component>
@@ -277,7 +268,7 @@
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280255" sideWeight="0.5109375" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -344,10 +335,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/example.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1311">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="722">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <marker date="1508137440364" expanded="true" signature="0:5" ph="import ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1508223623366" expanded="true" signature="262:371" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="262:373" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="262:1262" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="470:530" ph="SELECT IPadd... *" />
+            <marker date="1508223623366" expanded="true" signature="470:619" ph="SELECT IPadd... SELECT" />
+            <marker date="1508223623366" expanded="true" signature="837:992" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="1100:1176" ph="DELETE FROM " />
+            <marker date="1508223623366" expanded="true" signature="1100:1178" ph="DELETE FROM " />
+            <marker date="1508223623366" expanded="true" signature="1265:1354" ph="SELECT * FRO... proxyServer" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpiderCub.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="14" />
+          <folding>
+            <marker date="1507700124959" expanded="true" signature="4352:4441" ph="select IPadd... proxyServer" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1406">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding>
+            <marker date="1508137440364" expanded="true" signature="0:5" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -356,33 +386,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UpdateProxyDB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2185">
-          <caret line="117" column="104" lean-forward="false" selection-start-line="117" selection-start-column="104" selection-end-line="117" selection-end-column="113" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1508131692023" expanded="true" signature="4107:4196" ph="select IPadd... proxyServer" />
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1508223623366" expanded="true" signature="262:371" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="262:373" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="262:1262" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="470:530" ph="SELECT IPadd... *" />
+            <marker date="1508223623366" expanded="true" signature="470:619" ph="SELECT IPadd... SELECT" />
+            <marker date="1508223623366" expanded="true" signature="837:992" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="1100:1176" ph="DELETE FROM " />
+            <marker date="1508223623366" expanded="true" signature="1100:1178" ph="DELETE FROM " />
+            <marker date="1508223623366" expanded="true" signature="1265:1354" ph="SELECT * FRO... proxyServer" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getHtmlByUrlAndProxy.py">
+    <entry file="file://$PROJECT_DIR$/UpdateProxyDB.py" />
+    <entry file="file://$PROJECT_DIR$/getHtmlByUrlAndProxy.py" />
+    <entry file="file://$PROJECT_DIR$/SpiderCub.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state relative-caret-position="57">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="14" />
           <folding>
-            <marker date="1508132514694" expanded="true" signature="372:440" ph="SELECT IPadd... proxyServer" />
-            <marker date="1508132514694" expanded="true" signature="372:445" ph="SELECT IPadd... proxyServer" />
-            <marker date="1508132514694" expanded="true" signature="372:471" ph="SELECT IPadd... proxyServer" />
+            <marker date="1507700124959" expanded="true" signature="4352:4441" ph="select IPadd... proxyServer" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <marker date="1508137440364" expanded="true" signature="0:5" ph="import ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1508223623366" expanded="true" signature="262:371" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="262:373" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="262:1262" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="470:530" ph="SELECT IPadd... *" />
+            <marker date="1508223623366" expanded="true" signature="470:619" ph="SELECT IPadd... SELECT" />
+            <marker date="1508223623366" expanded="true" signature="837:992" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="1100:1176" ph="DELETE FROM " />
+            <marker date="1508223623366" expanded="true" signature="1100:1178" ph="DELETE FROM " />
+            <marker date="1508223623366" expanded="true" signature="1265:1354" ph="SELECT * FRO... proxyServer" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UpdateProxyDB.py" />
+    <entry file="file://$PROJECT_DIR$/getHtmlByUrlAndProxy.py" />
     <entry file="file://$PROJECT_DIR$/SpiderCub.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -397,28 +458,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getHtmlByUrlAndProxy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="59" column="35" lean-forward="false" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
           <folding>
-            <marker date="1508132514694" expanded="true" signature="372:440" ph="SELECT IPadd... proxyServer" />
-            <marker date="1508132514694" expanded="true" signature="372:445" ph="SELECT IPadd... proxyServer" />
-            <marker date="1508132514694" expanded="true" signature="372:471" ph="SELECT IPadd... proxyServer" />
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1508223623366" expanded="true" signature="262:371" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="262:373" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="262:1262" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="470:530" ph="SELECT IPadd... *" />
+            <marker date="1508223623366" expanded="true" signature="470:619" ph="SELECT IPadd... SELECT" />
+            <marker date="1508223623366" expanded="true" signature="837:992" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="1100:1176" ph="DELETE FROM " />
+            <marker date="1508223623366" expanded="true" signature="1100:1178" ph="DELETE FROM " />
+            <marker date="1508223623366" expanded="true" signature="1265:1354" ph="SELECT * FRO... proxyServer" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/getHtmlByUrlAndProxy.py" />
     <entry file="file://$PROJECT_DIR$/example.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="893">
           <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <marker date="1508137440364" expanded="true" signature="0:5" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -433,24 +494,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getHtmlByUrlAndProxy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="59" column="35" lean-forward="true" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
-          <folding>
-            <marker date="1508132514694" expanded="true" signature="372:440" ph="SELECT IPadd... proxyServer" />
-            <marker date="1508132514694" expanded="true" signature="372:445" ph="SELECT IPadd... proxyServer" />
-            <marker date="1508132514694" expanded="true" signature="372:471" ph="SELECT IPadd... proxyServer" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/getHtmlByUrlAndProxy.py" />
     <entry file="file://$PROJECT_DIR$/example.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <marker date="1508137440364" expanded="true" signature="0:5" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -470,7 +520,7 @@
         <state relative-caret-position="2831">
           <caret line="154" column="23" lean-forward="true" selection-start-line="154" selection-start-column="23" selection-end-line="154" selection-end-column="23" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <marker date="1508137440364" expanded="true" signature="0:5" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -490,7 +540,7 @@
         <state relative-caret-position="114">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <marker date="1508137440364" expanded="true" signature="0:5" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -511,7 +561,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="11" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <marker date="1508137440364" expanded="true" signature="0:5" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -532,7 +582,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="11" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <marker date="1508137440364" expanded="true" signature="0:5" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -543,7 +593,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="11" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <marker date="1508137440364" expanded="true" signature="0:5" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -571,41 +621,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/example.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1311">
-          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        <state relative-caret-position="627">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <marker date="1508137440364" expanded="true" signature="0:5" ph="import ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UpdateProxyDB.py" />
+    <entry file="file://$PROJECT_DIR$/getHtmlByUrlAndProxy.py" />
+    <entry file="file://$PROJECT_DIR$/_UpdateProxyDB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="164" column="32" lean-forward="true" selection-start-line="164" selection-start-column="32" selection-end-line="164" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1508223869166" expanded="true" signature="4107:4196" ph="select IPadd... proxyServer" />
+            <marker date="1508223869166" expanded="true" signature="5539:5713" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223869166" expanded="true" signature="5824:5916" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UpdateProxyDB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="128" column="30" lean-forward="true" selection-start-line="128" selection-start-column="30" selection-end-line="128" selection-end-column="30" />
+        <state relative-caret-position="399">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="34" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1508131692023" expanded="true" signature="4107:4196" ph="select IPadd... proxyServer" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getHtmlByUrlAndProxy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="88" column="25" lean-forward="false" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
-          <folding>
-            <marker date="1508132514694" expanded="true" signature="372:440" ph="SELECT IPadd... proxyServer" />
-            <marker date="1508132514694" expanded="true" signature="372:445" ph="SELECT IPadd... proxyServer" />
-            <marker date="1508132514694" expanded="true" signature="372:471" ph="SELECT IPadd... proxyServer" />
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1508223623366" expanded="true" signature="262:371" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="262:373" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="262:1262" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="470:530" ph="SELECT IPadd... *" />
+            <marker date="1508223623366" expanded="true" signature="470:619" ph="SELECT IPadd... SELECT" />
+            <marker date="1508223623366" expanded="true" signature="837:992" ph="SELECT IPadd... proxyServer" />
+            <marker date="1508223623366" expanded="true" signature="1100:1176" ph="DELETE FROM " />
+            <marker date="1508223623366" expanded="true" signature="1100:1178" ph="DELETE FROM " />
+            <marker date="1508223623366" expanded="true" signature="1265:1354" ph="SELECT * FRO... proxyServer" />
           </folding>
         </state>
       </provider>
