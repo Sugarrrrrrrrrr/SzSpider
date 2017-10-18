@@ -23,12 +23,15 @@ def main():
             print('-----', url, '----- try', i, '-----')
             html = gh.getHtml(gp.proxyServer)
             if html:
-                result = up.update(html)
-                print(result)
+                result, count = up.update(html)
+                print(result, count)
                 if result > 0:
-                    gp.proxyList=[]
                     gp.proxy_valid()
+                    if count > 0:
+                        gp.proxyList = []
                     break
+
+
             else:
                 print(html)
 

@@ -22,16 +22,28 @@ class GetProxy:
             self.proxyList.append("%s:%s" % (row[0], row[1]))
         conn.close()
 
+    # test
+        lenght = len(self.proxyList)
+        if lenght > 5:
+            lenght = 5
+        print(lenght)
+        for i in range(lenght):
+            print(self.proxyList[i])
+        print("input()")
+        input()
+    # test
+
+
+
     def proxy_valid(self):
         if self.used_proxy:
+            print('GetProxy::proxy_valid()')
             self.proxyList.insert(0, self.used_proxy)
-            
-            
+
             with sqlite3.connect('SpiderDB.db') as conn:
                 t = self.used_proxy.split(':')
                 c = conn.cursor()
-                c.execute("UPDATE proxyServer SET proofTime=%f WHERE IPaddress='%s' and port='%s'" % (time.time(), t[0], t[1]))
-                c.execute("UPDATE proxyServer SET writeTime=%f WHERE IPaddress='%s' and port='%s'" % (time.time(), t[0], t[1]))
+                c.execute("UPDATE proxyServer SET proofTime=%f, writeTime=%f WHERE IPaddress='%s' and port='%s'" % (time.time(), time.time(), t[0], t[1]))
                 conn.commit()
 
 
@@ -51,12 +63,12 @@ class GetHtml:
         print('GetHtml::__init__()')
         self.url = url
 
-        print(self.url)
+        # print(self.url)
 
     def getHtml(self, proxy):
         print('GetHtml::getHtml()')
         self.proxy = proxy
-        print(self.proxy)
+        print('use proxy:', self.proxy)
         headers = {"Accept": "*/*",
                    "Accept-Language": "zh-CN",
                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063",
@@ -80,9 +92,9 @@ class GetHtml:
             file = opener.open(self.url, timeout=5)
 
             data = file.read()
-            print(type(data))
+            # print(type(data))
             dataString = data.decode('utf-8')
-            print(type(data))
+            # print(type(data))
 
             return dataString
 
