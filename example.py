@@ -2,12 +2,34 @@ from _getHtmlByUrlAndProxy import GetProxy, GetHtml
 from _UpdateProxyDB import UpdateProxyDB
 from _UrlList import UrlList
 
-import time
-import sqlite3
+from datetime import datetime
 
 
+def write_log_file(read, insert, url, proxy_server):
 
-def main():
+    if url.startswith('file'):
+        return
+
+    t = datetime.now()
+    date = t.strftime('%Y-%m-%d')
+    time = t.strftime('%Y-%m-%d %H:%M:%S')
+
+    with open(r'log/log_%s.txt' % date, 'at', encoding='utf-8') as file:
+        if read > 0:
+            file.write(r'''%s
+read %d insert %d
+from %s
+with %s
+----------------------------------------
+''' % (time, read, insert, url, proxy_server))
+        else:
+            file.write(r'''%s
+bad proxy server: %s
+----------------------------------------
+''' % (time, proxy_server))
+
+
+def main(num=100):
     gp = GetProxy()
     up = UpdateProxyDB()
     ul = UrlList()
@@ -19,24 +41,27 @@ def main():
     url = ul.url_pop()
     while url:
         gh = GetHtml(url)
-        for i in range(100):
+        for i in range(num):
             print('-----', url, '----- try', i, '-----')
             html = gh.getHtml(gp.proxyServer)
             if html:
                 result, count = up.update(html)
-                print(result, count)
+
+                write_log_file(result, count, url, gp.used_proxy)
+
                 if result > 0:
                     gp.proxy_valid()
                     if count > 0:
                         gp.proxyList = []
                     break
-
-
             else:
                 print(html)
+
+            if i == num-1:
+                ul.url_append(url)
 
         url = ul.url_pop()
     
 
 if __name__ == '__main__':
-    main()
+    main(100)

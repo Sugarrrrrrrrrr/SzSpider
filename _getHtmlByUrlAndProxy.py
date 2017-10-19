@@ -12,27 +12,15 @@ class GetProxy:
     def __init__(self):
         print('GetProxy::__init__()')
 
-    def getMoreServer(self):
+    def getMoreServer(self, num=100):
         print('GetProxy::getMoreServer()')
         conn = sqlite3.connect('SpiderDB.db')
         c = conn.cursor()
-        cursor = c.execute("SELECT IPaddress, port, writeTime FROM proxyServer WHERE anonymous = \'高匿\' ORDER BY proofTime DESC")
+        cursor = c.execute("SELECT IPaddress, port, writeTime FROM proxyServer WHERE anonymous = \'高匿\' ORDER BY proofTime DESC LIMIT %d" % num)
         rl = cursor.fetchall()
         for row in rl:
             self.proxyList.append("%s:%s" % (row[0], row[1]))
         conn.close()
-
-    # test
-        lenght = len(self.proxyList)
-        if lenght > 5:
-            lenght = 5
-        print(lenght)
-        for i in range(lenght):
-            print(self.proxyList[i])
-        print("input()")
-        input()
-    # test
-
 
 
     def proxy_valid(self):
@@ -65,7 +53,7 @@ class GetHtml:
 
         # print(self.url)
 
-    def getHtml(self, proxy):
+    def getHtml(self, proxy, time_out=10):
         print('GetHtml::getHtml()')
         self.proxy = proxy
         print('use proxy:', self.proxy)
@@ -89,7 +77,7 @@ class GetHtml:
         opener.addheaders = headall
 
         try:
-            file = opener.open(self.url, timeout=5)
+            file = opener.open(self.url, timeout=time_out)
 
             data = file.read()
             # print(type(data))
