@@ -42,7 +42,7 @@ def main(num=100):
     while url:
         gh = GetHtml(url)
         for i in range(num):
-            print('-----', url, '----- try', i, '-----')
+            print('-----', url, '----- try', i+1, '-----')
             html = gh.getHtml(gp.proxyServer)
             if html:
                 result, count = up.update(html)
@@ -50,7 +50,8 @@ def main(num=100):
                 write_log_file(result, count, url, gp.used_proxy)
 
                 if result > 0:
-                    gp.proxy_valid()
+                    if not url.startswith('file'):
+                        gp.proxy_valid()
                     if count > 0:
                         gp.proxyList = []
                     break
