@@ -32,7 +32,7 @@ bad proxy server: %s
 def main(num=100):
     gp = GetProxy()
     up = UpdateProxyDB()
-    ul = UrlList()
+    ul = UrlList(initial_url = '')
 
     url_ = "http://www.xicidaili.com/wt/%s"
     for i in range(10):
