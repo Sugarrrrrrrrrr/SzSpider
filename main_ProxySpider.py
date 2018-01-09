@@ -29,10 +29,10 @@ bad proxy server: %s
 ''' % (time, proxy_server))
 
 
-def main(num=100):
+def main(num=100, s=''):
     gp = GetProxy()
     up = UpdateProxyDB()
-    ul = UrlList(initial_url = '')
+    ul = UrlList(initial_url = s)
 
     url_ = "http://www.xicidaili.com/wt/%s"
     for i in range(10):
